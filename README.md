@@ -1,11 +1,36 @@
 # Graph Blinking Bulbs
 
-> Simulating electrical signal propagation through blinking-node networks.
+Starter implementation for Dr. Richard Gordon's question:
 
-## 🔬 Description
-Models neurons or logic circuits as graphs of bulbs that blink according to propagation rules, studying signal delay, failure modes, and emergent cycles.
+> How does a graph react if each node may be a blinking bulb and electricity is passed between two nodes?
 
-## 🧪 Structure
-- `src/`: Graph simulation
-- `notebooks/`: Visual trace analysis
+The code models each graph node as an excitable bulb with three states:
+`OFF`, `ON`, and `REFRACTORY`.
 
+## Install for development
+
+```bash
+python -m pip install -e ".[dev]"
+```
+
+## Run demo
+
+```bash
+python -m graph_blinking_bulbs.demo
+```
+
+## Run tests
+
+```bash
+pytest
+```
+
+## First experiments
+
+- Compare paths, rings, and stars.
+- Stimulate two nodes and observe wave-front collisions.
+- Increase activation threshold.
+- Change refractory duration.
+- Search small graphs for periodic activity.
+
+See `ROADMAP.md` for next steps.
